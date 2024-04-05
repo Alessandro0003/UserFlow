@@ -7,13 +7,13 @@ Is listing information with name, email
 
 ## Requirements
 
-- [ ] The User must be able to register 
+- [x] The User must be able to register 
 - [ ] The User must be able to login 
-- [ ] The User must be able view Information with Email, Name
+- [] The User must be able view Information with Email, Name
 
 ## RB (Rules Business)
 
-- [ ] The User can only register for an once
+- [x] The User can only register for an once
 
 
 ## Installation the app dependency 📦
