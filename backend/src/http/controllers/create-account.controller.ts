@@ -1,4 +1,4 @@
-import { PrismaService } from '@/infra/database/prisma/prisma.service'
+import { PrismaService } from '@/database/prisma/prisma.service'
 import {
   Body,
   Controller,
@@ -30,7 +30,7 @@ export class CreateAccountController {
   async handle(@Body() body: CreateAccountBodySchema) {
     const { name, email, password } = body
 
-    const userWithSchemaEmail = await this.prisma.user.findMany({
+    const userWithSchemaEmail = await this.prisma.user.findUnique({
       where: {
         email,
       },
