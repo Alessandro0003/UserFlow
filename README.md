@@ -9,7 +9,7 @@ Is listing information with name, email
 
 - [x] The User must be able to register 
 - [ ] The User must be able to login 
-- [] The User must be able view Information with Email, Name
+- [ ] The User must be able view Information with Email, Name
 
 ## RB (Rules Business)
 
