@@ -1,0 +1,31 @@
+:root {
+    /* White */
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #d4d4d8;
+
+    /* Black */
+    --zinc-800: #27272a;
+    --zinc-900: #18181b;
+    --zinc-950: #09090b;
+
+    /* Purple */
+
+    --purple-800: #6b21a8;
+    --purple-900: #581c87;
+    --purple-950: #3b0764;
+
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body {
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 1rem;
+}
