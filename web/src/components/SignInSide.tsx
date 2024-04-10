@@ -13,24 +13,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined'
 import Typography from '@mui/material/Typography'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 
-function Copyright(props: any) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  )
-}
-
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme()
 
@@ -97,7 +79,6 @@ export function SignInSide() {
               sx={{ mt: 1 }}
             >
               <TextField
-                sx={{ bgcolo: 'white' }}
                 margin="normal"
                 required
                 fullWidth
@@ -106,9 +87,33 @@ export function SignInSide() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                InputProps={{ style: { color: 'var(--slate-300)' } }} // Definindo a cor do texto dentro do input
+                inputProps={{ style: { color: 'var(--slate-300)' } }} // Definindo a cor do texto dentro do input
+                sx={{
+                  '& label': {
+                    color: 'var(--slate-300)',
+                  },
+                  '& label.Mui-focused': {
+                    color: 'var(--zinc-800)',
+                  },
+                  '& .MuiInput-underline:after': {
+                    borderBottomColor: 'var(--zinc-800)',
+                  },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'var(--zinc-800)',
+                    },
+                    '&:hover fieldset': {
+                      borderColor: 'var(--zinc-800)',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'var(--zinc-800)',
+                    },
+                  },
+                }}
               />
               <TextField
-                sx={{ color: 'white' }}
+                style={{ color: 'white' }}
                 margin="normal"
                 required
                 fullWidth
@@ -117,8 +122,33 @@ export function SignInSide() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                InputProps={{ style: { color: 'var(--slate-300)' } }} // Definindo a cor do texto dentro do input
+                inputProps={{ style: { color: 'var(--slate-300)' } }} // Definindo a cor do texto dentro do input
+                sx={{
+                  '& label': {
+                    color: 'var(--slate-300)',
+                  },
+                  '& label.Mui-focused': {
+                    color: 'var(--zinc-800)',
+                  },
+                  '& .MuiInput-underline:after': {
+                    borderBottomColor: 'var(--zinc-800)',
+                  },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'var(--zinc-800)',
+                    },
+                    '&:hover fieldset': {
+                      borderColor: 'var(--zinc-800)',
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'var(--zinc-800)',
+                    },
+                  },
+                }}
               />
               <FormControlLabel
+                style={{ color: 'white' }}
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
@@ -126,23 +156,49 @@ export function SignInSide() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{
+                  mt: 3,
+                  mb: 2,
+                  backgroundColor: 'var(--purple-950)',
+                  '&:hover': {
+                    backgroundColor: 'var(--purple-800)',
+                  },
+                }}
               >
                 Sign In
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link
+                    href="#"
+                    variant="body2"
+                    sx={{
+                      color: 'var(--purple-800)',
+                      textDecoration: 'none',
+                      '&:hover': {
+                        color: 'var(--purple-950)',
+                      },
+                    }}
+                  >
                     Forgot password?
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link
+                    href="#"
+                    variant="body2"
+                    sx={{
+                      color: 'var(--purple-800)',
+                      textDecoration: 'none',
+                      '&:hover': {
+                        color: 'var(--purple-950)',
+                      },
+                    }}
+                  >
                     {"Don't have an account? Sign Up"}
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
         </Grid>
